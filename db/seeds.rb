@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+fw = Notebook.create(name: "Freewrite")
+rwp = Notebook.create(name: "Random Word Stories")
+flp = Notebook.create(name: "First Line Stories")
+dtp = Notebook.create(name: "Deep Thinkers")
