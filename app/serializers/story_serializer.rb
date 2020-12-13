@@ -1,4 +1,4 @@
 class StorySerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :title, :content
 end
