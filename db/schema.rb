@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_13_000533) do
+ActiveRecord::Schema.define(version: 2020_12_15_032049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 2020_12_13_000533) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "notebook_id"
+    t.index ["notebook_id"], name: "index_prompts_on_notebook_id"
   end
 
   create_table "stories", force: :cascade do |t|
@@ -39,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_12_13_000533) do
     t.index ["prompt_id"], name: "index_stories_on_prompt_id"
   end
 
+  add_foreign_key "prompts", "notebooks"
   add_foreign_key "stories", "notebooks"
   add_foreign_key "stories", "prompts"
 end
