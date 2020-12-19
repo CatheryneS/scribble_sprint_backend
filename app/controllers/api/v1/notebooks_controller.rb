@@ -5,4 +5,8 @@ class Api::V1::NotebooksController < ApplicationController
         render json: NotebookSerializer.new(notebooks)
     end
 
+    def show
+        notebook = Notebook.find_by(id: params[:id])
+        render json: NotebookSerializer.new(notebook)
+    end
 end
