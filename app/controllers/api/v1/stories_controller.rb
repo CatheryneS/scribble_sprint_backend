@@ -5,6 +5,11 @@ class Api::V1::StoriesController < ApplicationController
         render json: StorySerializer.new(story)
     end
 
+    def show
+        story = Story.find_by(id: params[:id])
+        render json: StorySerializer.new(story)
+    end
+
     private
 
     def story_params
