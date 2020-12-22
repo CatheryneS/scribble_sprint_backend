@@ -16,3 +16,6 @@ Prompt.create(description: "What gets you excited about life?", category: "Deep 
 Prompt.create(description: "Footsteps slowly creaked on every step of the stairs. The bedroom door handle turned slowly.", category: "First Line Stories", notebook_id: "3")
 Prompt.create(description: "A shrill cry echoed in the mist", category: "First Line Stories", notebook_id: "3")
 Prompt.create(description: "What life lesson did you learn the hard way?", category: "Deep Thinkers", notebook_id: "4")
+Prompt.create(description: "If you could only eat one food for the rest of your life, what food would it be?", category: "What if?", notebook_id:"2")
+Prompt.create(description:"If time machines existed, what would be the first thing you’d do?", category: "What if?", notebook_id: "2")
+        
